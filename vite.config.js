@@ -8,13 +8,18 @@ export default {
         outDir: '../dist',
         emptyOutDir: true,
         rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'src/index.njk.html'),
-                about: resolve(__dirname, 'src/about.njk.html'),
-                logseq: resolve(__dirname, 'src/logseq.njk.html'),
-                obsidian: resolve(__dirname, 'src/obsidian.njk.html'),
-                tiddlywiki: resolve(__dirname, 'src/tiddlywiki.njk.html')
-            }
+            input: [
+                resolve(__dirname, 'src/index.njk'),
+                resolve(__dirname, 'src/about.njk'),
+                resolve(__dirname, 'src/logseq.njk'),
+                resolve(__dirname, 'src/obsidian.njk'),
+                resolve(__dirname, 'src/tiddlywiki.njk')
+            ]
+            // main: resolve(__dirname, 'src/index.njk'),
+            // about: resolve(__dirname, 'src/about.njk'),
+            // logseq: resolve(__dirname, 'src/logseq.njk'),
+            // obsidian: resolve(__dirname, 'src/obsidian.njk'),
+            // tiddlywiki: resolve(__dirname, 'src/tiddlywiki.njk')
         }
     },
     server: {
@@ -22,9 +27,18 @@ export default {
         hot: true
     },
     plugins: [
-        vituum(),
+        vituum({
+            pages: {
+                extensions: ['njk']
+            }
+        }),
         nunjucks({
-            root: resolve(__dirname, 'src')
+            root: resolve(__dirname, 'src'),
+            options: {
+                throwOnUndefined: false,
+                watch: true,
+                noCache: true
+            }
         })
     ]
 }
