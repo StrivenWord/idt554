@@ -6,10 +6,15 @@ export default {
     root: resolve(__dirname, 'src'),
     build: {
         outDir: '../dist',
+        emptyOutDir: true,
         rollupOptions: {
-            input: [
-                'index.njk.html',
-            ]
+            input: {
+                main: resolve(__dirname, 'src/index.njk.html'),
+                about: resolve(__dirname, 'src/about.njk.html'),
+                logseq: resolve(__dirname, 'src/logseq.njk.html'),
+                obsidian: resolve(__dirname, 'src/obsidian.njk.html'),
+                tiddlywiki: resolve(__dirname, 'src/tiddlywiki.njk.html')
+            }
         }
     },
     server: {
@@ -18,6 +23,8 @@ export default {
     },
     plugins: [
         vituum(),
-        nunjucks()
+        nunjucks({
+            root: resolve(__dirname, 'src')
+        })
     ]
 }
