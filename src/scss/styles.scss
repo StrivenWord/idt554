@@ -2,9 +2,12 @@
 
 // Custom CSS
 div.d-flex > nav {
-    width: 200px;
-    min-height: 100vh;
-    @media screen and (min-width: 1200px) {
+    width: 100%;  // for medium breakpoint, the default -- horizontal
+    @media screen and (min-width: 992px) {  // large breakpoint -- the ideal desktop experience -- left sidebar
+        width: 200px;
+        min-height: 100vh;
+    }
+    @media screen and (min-width: 1200px) {  // Wider navbar for full screen on full res monitors
         width: 320px;
     }
 }

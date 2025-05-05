@@ -8,22 +8,25 @@
     </head>
     <body>
         
-        <div class="d-flex">
+        <div class="d-flex flex-column flex-lg-row">  <!-- Column above 992, top horizontal below 992, hamburger below 576 -->
             <nav class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
-                <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" href="/">
-                    <img src="./img/sitelogo.png" alt="image of a computer monitor with a closing XML tag on it">
-                    <span class="fs-4">IDT 554</span>
-                </a>
-                <hr>
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item">
-                        <a class="nav-link{% if page == 'home' %} active{% endif %}" href="/index.html" {% if page == 'home' %}aria-current="page"{% endif %}>Home</a>
-                        <a class="nav-link{% if page == 'about' %} active{% endif %}" href="/about.html" {% if page == 'home' %}aria-current="page"{% endif %}>About</a>
-                        <a class="nav-link{% if page == 'logseq' %} active{% endif %}" href="/logseq.html" {% if page == 'home' %}aria-current="page"{% endif %}>Logseq</a>
-                        <a class="nav-link{% if page == 'obsidian' %} active{% endif %}" href="/obsidian.html" {% if page == 'home' %}aria-current="page"{% endif %}>Obsidian</a>
-                        <a class="nav-link{% if page == 'tiddlywiki' %} active{% endif %}" href="/tiddlywiki.html" {% if page == 'home' %}aria-current="page"{% endif %}>TiddlyWiki</a>
-                    </li>
-                </ul>
+                <div class="container-fluid d-lg-flex flex-lg-column py-lg-3 align-items-start">
+                    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" href="/">
+                        <img src="./img/sitelogo.png" alt="image of a computer monitor with a closing XML tag on it">
+                        <span class="fs-4">IDT 554</span>
+                    </a>
+                    <!-- hamburger here -->
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a class="nav-link{% if page == 'home' %} active{% endif %}" href="/index.html" {% if page == 'home' %}aria-current="page"{% endif %}>Home</a>
+                            <a class="nav-link{% if page == 'about' %} active{% endif %}" href="/about.html" {% if page == 'home' %}aria-current="page"{% endif %}>About</a>
+                            <a class="nav-link{% if page == 'logseq' %} active{% endif %}" href="/logseq.html" {% if page == 'home' %}aria-current="page"{% endif %}>Logseq</a>
+                            <a class="nav-link{% if page == 'obsidian' %} active{% endif %}" href="/obsidian.html" {% if page == 'home' %}aria-current="page"{% endif %}>Obsidian</a>
+                            <a class="nav-link{% if page == 'tiddlywiki' %} active{% endif %}" href="/tiddlywiki.html" {% if page == 'home' %}aria-current="page"{% endif %}>TiddlyWiki</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
             <main>
