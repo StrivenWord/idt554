@@ -1,1 +1,7 @@
 @import "bootstrap/scss/bootstrap";
+
+// Custom CSS
+div.d-flex > nav {
+    width: 200px;
+    min-height: 100vh;
+}

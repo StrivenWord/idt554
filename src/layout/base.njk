@@ -9,31 +9,31 @@
     <body>
         
         <div class="d-flex">
-        <nav class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 200px; min-height: 100vh;">
-            <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" href="/">
-                <img src="./img/sitelogo.png" alt="image of a computer monitor with a closing XML tag on it">
-                <span class="fs-4">IDT 554</span>
-            </a>
-            <hr>
-            <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                    <a class="nav-link{% if page == 'home' %} active{% endif %}" href="/index.html" {% if page == 'home' %}aria-current="page"{% endif %}>Home</a>
-                    <a class="nav-link{% if page == 'about' %} active{% endif %}" href="/about.html" {% if page == 'home' %}aria-current="page"{% endif %}>About</a>
-                    <a class="nav-link{% if page == 'logseq' %} active{% endif %}" href="/logseq.html" {% if page == 'home' %}aria-current="page"{% endif %}>Logseq</a>
-                    <a class="nav-link{% if page == 'obsidian' %} active{% endif %}" href="/obsidian.html" {% if page == 'home' %}aria-current="page"{% endif %}>Obsidian</a>
-                    <a class="nav-link{% if page == 'tiddlywiki' %} active{% endif %}" href="/tiddlywiki.html" {% if page == 'home' %}aria-current="page"{% endif %}>TiddlyWiki</a>
-                </li>
-            </ul>
-        </nav>
-        
-        <main>
-            <!-- including the templates for the individual pages -->
-            {% block content %}{% endblock %}
-        </main>
-        
-        <footer>
-            <!-- universal footer here -->
-        </footer>
+            <nav class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+                <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" href="/">
+                    <img src="./img/sitelogo.png" alt="image of a computer monitor with a closing XML tag on it">
+                    <span class="fs-4">IDT 554</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a class="nav-link{% if page == 'home' %} active{% endif %}" href="/index.html" {% if page == 'home' %}aria-current="page"{% endif %}>Home</a>
+                        <a class="nav-link{% if page == 'about' %} active{% endif %}" href="/about.html" {% if page == 'home' %}aria-current="page"{% endif %}>About</a>
+                        <a class="nav-link{% if page == 'logseq' %} active{% endif %}" href="/logseq.html" {% if page == 'home' %}aria-current="page"{% endif %}>Logseq</a>
+                        <a class="nav-link{% if page == 'obsidian' %} active{% endif %}" href="/obsidian.html" {% if page == 'home' %}aria-current="page"{% endif %}>Obsidian</a>
+                        <a class="nav-link{% if page == 'tiddlywiki' %} active{% endif %}" href="/tiddlywiki.html" {% if page == 'home' %}aria-current="page"{% endif %}>TiddlyWiki</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main>
+                <!-- including the templates for the individual pages -->
+                {% block content %}{% endblock %}
+            </main>
+
+            <footer>
+                <!-- universal footer here -->
+            </footer>
         </div>
 
     </body>
