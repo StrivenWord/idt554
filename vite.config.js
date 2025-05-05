@@ -4,6 +4,7 @@ import nunjucks from '@vituum/vite-plugin-nunjucks'
 
 export default {
     root: resolve(__dirname, 'src'),
+    base: './', // prevents broken CSS inclusion in published site
     build: {
         outDir: '../dist',
         emptyOutDir: true,
