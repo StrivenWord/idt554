@@ -4,4 +4,7 @@
 div.d-flex > nav {
     width: 200px;
     min-height: 100vh;
+    @media screen and (min-width: 1200px) {
+        width: 320px;
+    }
 }
