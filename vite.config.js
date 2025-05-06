@@ -36,6 +36,10 @@ export default defineConfig({
                 watch: true,
                 noCache: true
             }
-        })
+        }),
+        liveReload([
+            'src/scss/styles.scss',
+            'src/js/main.js'
+        ])
     ]
 })
