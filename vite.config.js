@@ -3,7 +3,7 @@ import vituum from 'vituum'
 import nunjucks from '@vituum/vite-plugin-nunjucks'
 import liveReload from 'vite-plugins-live-reload'
 
-export default {
+export default defineConfig({
     root: resolve(__dirname, 'src'),
     base: './', // prevents broken CSS inclusion in published site
     build: {
@@ -17,11 +17,6 @@ export default {
                 resolve(__dirname, 'src/obsidian.njk'),
                 resolve(__dirname, 'src/tiddlywiki.njk')
             ]
-            // main: resolve(__dirname, 'src/index.njk'),
-            // about: resolve(__dirname, 'src/about.njk'),
-            // logseq: resolve(__dirname, 'src/logseq.njk'),
-            // obsidian: resolve(__dirname, 'src/obsidian.njk'),
-            // tiddlywiki: resolve(__dirname, 'src/tiddlywiki.njk')
         }
     },
     server: {
@@ -43,4 +38,4 @@ export default {
             }
         })
     ]
-}
+})
