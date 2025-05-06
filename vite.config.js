@@ -5,7 +5,7 @@ import nunjucks from '@vituum/vite-plugin-nunjucks'
 import liveReload from 'vite-plugin-live-reload'
 
 export default defineConfig({
-    root: resolve(__dirname, 'src'),
+    root: 'src', // resolve(__dirname, 'src'),
     base: './', // prevents broken CSS inclusion in published site
     build: {
         outDir: '../dist',
@@ -20,13 +20,17 @@ export default defineConfig({
             ]
         }
     },
+    appType: 'mpa',
     server: {
         port: 8484,
+        host: true,
+        open: true,
         hot: true
     },
     plugins: [
         vituum({
             pages: {
+                dir: '.',
                 extensions: ['njk']
             }
         }),
