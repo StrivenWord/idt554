@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import vituum from 'vituum'
 import nunjucks from '@vituum/vite-plugin-nunjucks'
-import liveReload from 'vite-plugins-live-reload'
+import liveReload from 'vite-plugin-live-reload'
 
 export default defineConfig({
     root: resolve(__dirname, 'src'),
