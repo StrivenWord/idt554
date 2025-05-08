@@ -18,12 +18,16 @@ div.d-flex > nav {
 }
 
 footer {
+    max-width: 100vw;
+    position: absolute;
+    height: auto;
+    bottom: 0;
     @media screen and (min-width: 1200px) {
-        max-width: 100vw;
-        position: absolute;
-        height: 100px;
         left: 320px;
-        width: calc(100% - 320px);
-        bottom: 0;
+        width: calc(100vw - 320px);
+    }
+    @media screen and (min-width: 992px) {
+        left: 200px;
+        width: calc(100vw - 200px);
     }
 }
