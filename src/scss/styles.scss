@@ -25,9 +25,14 @@ footer {
     @media screen and (min-width: 1200px) {
         left: 320px;
         width: calc(100vw - 320px);
+        /* text-align: right; */
     }
     @media screen and (min-width: 992px) {
         left: 200px;
         width: calc(100vw - 200px);
+        /* text-align: right; */
+    }
+    @media screen and (max-width: 991px) {
+        width: 100%;
     }
 }
