@@ -1,3 +1,15 @@
+// Overriding font sizes to add utility classes for smaller patterns.
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem,
+  7: 2rem,
+  8: 1.5rem
+);
+
 @import "bootstrap/scss/bootstrap";
 
 body {
@@ -36,3 +48,5 @@ footer {
         width: 100%;
     }
 }
+
+
