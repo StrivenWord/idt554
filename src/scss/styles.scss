@@ -1,3 +1,8 @@
+$navwidth:     200px;
+$navwidthplus: 320px;
+$footerheight: 100px;
+$buffsize:      20px; // Size for extra spacing, boundaries, etc.
+
 // Overriding font sizes to add utility classes for smaller patterns.
 $display-font-sizes: (
   1: 5rem,
@@ -20,12 +25,21 @@ body {
 div.d-flex > nav {
     width: 100%;  // for medium breakpoint, the default -- horizontal
     @media screen and (min-width: 992px) {  // large breakpoint -- the ideal desktop experience -- left sidebar
-        width: 200px;
+        width: $navwidth;
         min-height: 100vh;
         z-index: 1;
     }
     @media screen and (min-width: 1200px) {  // Wider navbar for full screen on full res monitors
-        width: 320px;
+        width: $navwidthplus;
+    }
+}
+
+main {
+    @media screen and (min-width: 1200px) {
+        padding-bottom: $footerheight + ($buffsize / 2);
+    }
+    @media screen and (min-width: 576px) and (max-width: 1199px) {
+        padding-bottom: $footerheight + $buffsize;
     }
 }
 
@@ -35,13 +49,13 @@ footer {
     height: auto;
     bottom: 0;
     @media screen and (min-width: 1200px) {
-        left: 320px;
-        width: calc(100vw - 320px);
+        left: $navwidthplus;
+        width: calc(100vw - $navwidthplus);
         /* text-align: right; */
     }
     @media screen and (min-width: 992px) {
-        left: 200px;
-        width: calc(100vw - 200px);
+        left: $navwidth;
+        width: calc(100vw - $navwidth);
         /* text-align: right; */
     }
     @media screen and (max-width: 991px) {
