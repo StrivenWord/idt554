@@ -3,7 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-        <main>
+        <i class="bi bi-chevron-expand">
             <div class="container-fluid p-4">
                 <div class="row py-5">
                     <h1 class="display-4">Knowledge is Personal</h1>
@@ -25,38 +25,38 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="row mt-5" id="cards">
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h3 class="card-title h4">Logseq</h3>
-                                        <p class="card-text">An open-source platform for journaling and studying, built on a local database with synchronization features.</p>
-                                        <a href="./public/m14-logseq.json" class="btn btn-outline-primary">Download JSON</a>
-                                        <p class="small">To obtain the example Logseq project, you must install the software and then import the provide JSON file, from which it will construct its database.</p>
-                                    </div>
+                    <section class="row mt-5" id="cards">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                </i>
+                                    <h3 class="card-title h4">Logseq</h3> {% include 'partials/expand.svg.njk' %}<i class="bi bi-chevron-expand"></i>
+                                    <p class="card-text">An open-source platform for journaling and studying, built on a local database with synchronization features.</p>
+                                    <a href="./public/m14-logseq.json" class="btn btn-outline-primary">Download JSON</a>
+                                    <p class="small">To obtain the example Logseq project, you must install the software and then import the provide JSON file, from which it will construct its database.</p>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h3 class="card-title h4">Obsidian</h3>
-                                        <p class="card-text">A text editor that manages directories of plain text Markdown files as a knowledge base, simple enough for anyone, offering low overhead note taking, but low level enough to please technical experts.</p>
-                                        <a href="./public/m14-obsidian.zip" class="btn btn-outline-primary">Download ZIP</a>
-                                        <p class="small">Obsidian projects are just directories full of Markdown files. Unzip the compressed archive as a folder, then open the Obsidian app and select the new directory.</p>
-                                    </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title h4">Obsidian</h3> {% include 'partials/expand.svg.njk' %}<i class="bi bi-chevron-expand"></i>
+                                    <p class="card-text">A text editor that manages directories of plain text Markdown files as a knowledge base, simple enough for anyone, offering low overhead note taking, but low level enough to please technical experts.</p>
+                                    <a href="./public/m14-obsidian.zip" class="btn btn-outline-primary">Download ZIP</a>
+                                    <p class="small">Obsidian projects are just directories full of Markdown files. Unzip the compressed archive as a folder, then open the Obsidian app and select the new directory.</p>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100 shadow-sm">
-                                    <div class="card-body">
-                                        <h3 class="card-title h4">TiddlyWiki</h3>
-                                        <p class="card-text">A non-linear notebook implemented as a single web page, a powerful free-form hypertext platform, a blank canvas for representing any associative concept in the browser.</p>
-                                        <a href="./public/m14-tiddlywiki.html" class="btn btn-outline-primary">Download HTML</a>
-                                        <p class="small">Save the provied HTML file to your computer and open it in any web browser, or simply navigate to it.</p>
-                                    </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h3 class="card-title h4">TiddlyWiki</h3> {% include 'partials/expand.svg.njk' %}<i class="bi bi-chevron-expand"></i>
+                                    <p class="card-text">A non-linear notebook implemented as a single web page, a powerful free-form hypertext platform, a blank canvas for representing any associative concept in the browser.</p>
+                                    <a href="./public/m14-tiddlywiki.html" class="btn btn-outline-primary">Download HTML</a>
+                                    <p class="small">Save the provied HTML file to your computer and open it in any web browser, or simply navigate to it.</p>
                                 </div>
                             </div>
-                        </section>
+                        </div>
+                    </section>
                     </article>
                 </div>
             </div>
