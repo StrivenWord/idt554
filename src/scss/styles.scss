@@ -63,4 +63,14 @@ footer {
     }
 }
 
-
+h3.card-title {
+    display: inline-block;
+}
+.card-body {
+    display: relative;
+}
+.bi-chevron-expand {
+    display: inline-block;
+    position: relative;
+    bottom: 3px;
+}
