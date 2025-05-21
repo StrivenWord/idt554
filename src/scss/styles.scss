@@ -68,6 +68,10 @@ h3.card-title {
 }
 .card-body {
     display: relative;
+    a {
+        max-height: 4em;
+        align-self: space-around;
+    }
 }
 .bi-chevron-expand {
     display: inline-block;
