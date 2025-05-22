@@ -41,6 +41,15 @@ main {
     @media screen and (min-width: 576px) and (max-width: 1199px) {
         padding-bottom: $footerheight + $buffsize;
     }
+    @media screen and (max-width: 575px) and (min-width: 536px) {
+        padding-bottom: $footerheight;
+    }
+    @media screen and (max-width: 535px) and (min-wdith: 459px) {
+        padding-bottom: $footerheight + ($buffsize * 2);
+    }
+    @media screen and (max-width: 458px) {
+        padding-bottom: $footerheight + ($buffsize *4);
+    }
 }
 
 footer {
